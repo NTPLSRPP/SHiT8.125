@@ -1,100 +1,137 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { FloatingNav } from "@/components/ui/floating-navbar";
+import { TypewriterEffectSmooth} from "@/components/ui/typewriter-effect";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { Tabs } from "@/components/ui/tabs";
+
+import AgendaTable1 from "./agendatable1";
+import AgendaTable2 from "./agendatable2";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const navItems = [
+    {
+      name: "Home",
+      link: "#hero",
+    },
+    {
+      name: "Agenda",
+      link: "#agenda",
+    },
+    {
+      name: "Supporters",
+      link: "#supporters",
+    },
+    {
+      name: "Projects",
+      link: "#projects",
+    },
+  ]
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+  const title = [
+    {
+      text: "The",
+    },
+    {
+      text: "Stupid",
+      className: "text-purple-500 dark:text-purple-500",
+    },
+    {
+      text: "Hackathon",
+    },
+    {
+      text: "at KMUTT",
+    }
+  ]
+
+  const tabs = [
+    {
+      title: "Day 1",
+      value: "day1",
+      content: (
+        <AgendaTable1 />
+      )
+    },
+    {
+      title: "Day 2",
+      value: "day2",
+      content: (
+        <AgendaTable2 />
+      )
+    }
+  ]
+
+  const description = `The Stupid Hackathon is a mad lit event where people create apps that are totally mid, showcasing their creativity in building useless projects that no one is asking for, often with a negative aura and a touch of skibidi vibes, leaving everyone feeling a bit sus about the whole thing.`;
+
+  return (
+    <div className="flex flex-col overflow-x-hidden dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2]">
+      <FloatingNav navItems={navItems} />
+      <div className="">
+        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start justify-center">
+          <section id="hero" className="section w-screen h-screen">
+            <HeroHighlight>
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: [20, -5, 0],
+                }}
+                transition={{
+                  duration: 0.5,
+                  ease: [0.4, 0.0, 0.2, 1],
+                }}
+                className="text-5xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug sm:ml-0 lg:text-center mx-auto "
+              >
+                <TypewriterEffectSmooth words={title} className="text-xl" />
+                <Highlight className="text-black dark:text-white text-xl">
+                  version 8.125
+                </Highlight>
+              </motion.h1>
+            </HeroHighlight>
+          </section>
+          <section id="description" className="section flex flex-col p-8 justify-center items-center w-screen h-full">
+            <TextGenerateEffect words={description} className="px-8" />
+          </section>
+          <section id="agenda" className="section flex flex-col  p-1 sm:p-4 justify-center items-center w-full">
+            <h2 className="text-3xl font-semibold my-8 ">Agenda</h2>
+            <div className="w-full lg:w-[120vh] px-5 h-[150vh] lg:h-screen">
+            <Tabs tabs={tabs} tabClassName="px-10 py-3"/>
+            </div> 
+          </section>
+          <section id="supporters" className="section flex flex-col p-8 mt-4 justify-center items-center w-screen h-full">
+            <h2 className="text-3xl font-semibold mb-4">Supporters</h2>
+            <p>Thanks to our equally misguided supporters who made this event possible:</p>
+            <div className="flex justify-center space-x-6 mt-4">
+              <img src="/logo1.png" alt="Logo 1" className="h-16" />
+              <img src="/logo2.png" alt="Logo 2" className="h-16" />
+              <img src="/logo3.png" alt="Logo 3" className="h-16" />
+            </div>
+          </section>
+          <section id="projects" className="section flex flex-col p-8 mt-4 justify-center items-center w-screen h-full">
+            <h2 className="text-3xl font-semibold mb-4">Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className=" p-6 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold mb-2">Project 1: Useless Button</h3>
+                <p>A button that doesn’t do anything – truly innovative.</p>
+              </div>
+              <div className="p-6 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold mb-2">Project 2: Confusing Calculator</h3>
+                <p>Every calculation is wrong, but at least it’s entertaining.</p>
+              </div>
+              <div className="p-6 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold mb-2">Project 3: Reverse Alarm Clock</h3>
+                <p>Wakes you up at random times to make sure you never sleep well.</p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center min-h-52">
+        <p>&copy; 2024 Stupid Hackathon. We apologize for nothing.</p>
       </footer>
     </div>
   );
