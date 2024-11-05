@@ -62,7 +62,7 @@ export default function Home() {
     }
   ]
 
-  const description = `The Stupid Hackathon is a mad lit event where people create apps that are totally mid, showcasing their creativity in building useless projects that no one is asking for, often with a negative aura and a touch of skibidi vibes, leaving everyone feeling a bit sus about the whole thing.`;
+  // const description = `The Stupid Hackathon is a mad lit event where people create apps that are totally mid, showcasing their creativity in building useless projects that no one is asking for, often with a negative aura and a touch of skibidi vibes, leaving everyone feeling a bit sus about the whole thing.`;
 
   return (
     <div className="flex flex-col overflow-x-hidden dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2]">
@@ -93,9 +93,9 @@ export default function Home() {
               </motion.h1>
             </HeroHighlight>
           </section>
-          <section id="description" className="section flex flex-col p-8 justify-center items-center w-screen h-full">
+          {/* <section id="description" className="section flex flex-col p-8 justify-center items-center w-screen h-full">
             <TextGenerateEffect words={description} className="px-8" />
-          </section>
+          </section> */}
           <section id="agenda" className="section flex flex-col  p-1 sm:p-4 justify-center items-center w-full">
             <h2 className="text-3xl font-semibold my-8 ">Agenda</h2>
             <div className="w-full lg:w-[120vh] px-5 h-[150vh] lg:h-screen">
