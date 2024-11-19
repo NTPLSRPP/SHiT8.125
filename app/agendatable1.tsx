@@ -2,7 +2,7 @@
 // components/AgendaTable.js
 export default function AgendaTable1() {
     return (
-      <div className="overflow-x-auto border rounded-xl bg-primary dark:bg-black pb-3 text-sm">
+      <div className="overflow-x-auto border rounded-xl bg-slate-50 dark:bg-black pb-3 text-sm">
         <p className="text-3xl p-4">Day 1 - November 23 2024</p>
         <table className="min-w-full ">
           <thead>

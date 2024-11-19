@@ -2,7 +2,7 @@
 
 export default function AgendaTable2() {
     return (
-      <div className="overflow-x-auto border rounded-xl bg-primary dark:bg-black pb-3 text-sm flex flex-col">
+      <div className="overflow-x-auto border rounded-xl bg-slate-50 dark:bg-black pb-3 text-sm flex flex-col">
         <p className="text-3xl p-4">Day 2 - November 24 2024</p>
         <table className="min-w-full">
           <thead>
