@@ -132,7 +132,7 @@ export default function Home() {
               <Tabs tabs={tabs} tabClassName="px-10 py-3" />
             </div>
           </section>
-          <section id="supporters" className="section flex flex-col p-8 mt-4 pt-44 lg:pt- justify-center items-center w-screen h-screen">
+          <section id="supporters" className="section flex flex-col p-8 mt-4 pt-44 lg:pt-24 justify-center items-center w-screen h-screen">
             <p className="text-[#0078D4] opacity-40 text-[390px] absolute mb-4 translate-y-[-320px] hidden lg:block">Supporters</p>
             <h2 className="text-3xl font-semibold mb-4 lg:hidden">Supporters/Partner</h2>
             <p className="text-lg mb-4 lg:hidden">Thanks to our equally misguided supporters who made this event possible:</p>
