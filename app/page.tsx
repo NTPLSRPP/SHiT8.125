@@ -175,7 +175,7 @@ export default function Home() {
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start justify-center">
           <section id="hero" className="section w-screen h-screen">
             <Image src={Doro} alt="logo" width={1080} height={1920} className="hidden lg:block absolute top-0 left-0 w-full h-full object-cover z-10" />
-            <Image src={SingleDoro} alt="logo" width={250} height={250} className="lg:hidden absolute top-[680px] left-40 object-cover z-10" />
+            <Image src={SingleDoro} alt="logo" width={250} height={250} className="lg:hidden absolute bottom-0 right-0 object-cover z-10" />
             <HeroHighlight className="">
               <motion.h1
                 initial={{
