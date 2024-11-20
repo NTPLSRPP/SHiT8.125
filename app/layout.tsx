@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Stupid Hackathon",
+  title: "SHiT 8.125",
   description: "Why i'm the only one who making this stupid hackathon website?",
 };
 
