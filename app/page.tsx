@@ -167,8 +167,6 @@ export default function Home() {
     }
   ]
 
-  // const description = `The Stupid Hackathon is a mad lit event where people create apps that are totally mid, showcasing their creativity in building useless projects that no one is asking for, often with a negative aura and a touch of skibidi vibes, leaving everyone feeling a bit sus about the whole thing.`;
-
   return (
     <div className="flex flex-col overflow-x-hidden dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2]">
       <RandomDoro />
