@@ -15,6 +15,14 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   const [darkMode, setDarkMode] = useState(true);
 
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     if (!darkMode) {
@@ -23,12 +31,6 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
       document.documentElement.classList.remove("dark");
     }
   };
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>

@@ -13,7 +13,7 @@ import CreatorGarten from "@/assets/creatorsgarten.svg"
 import kmutt from "@/assets/kmutt_Graphic_notext.svg"
 import microsoft from "@/assets/Microsoft_logo_(2012).svg"
 import MicrosoftLogo from "@/assets/Microsoft_logo.svg"
-
+import loongnhoom from "@/assets/loongnhoom.jpg"
 import AgendaTable1 from "./agendatable1";
 import AgendaTable2 from "./agendatable2";
 import { Meteors } from "@/components/ui/meteors";
@@ -89,6 +89,12 @@ export default function Home() {
       description: "We are a community of creators (mostly) based in Thailand. We work with 🌃 open source communities, 💻 developers, 🚀 educators, 🦾 artists, and more to explore new possibilities and co-create fascinating things together.",
       link: "https://creatorsgarten.org/",
       icon: <Image src={CreatorGarten} alt="logo" width={100} height={100} className="dark:invert" />,
+    },
+    {
+      title: "Loongnhoom_square",
+      description: "ลุงหนุ่ม สแควร์ จำหน่ายเครื่องดื่ม น้ำปั่น ทาโกยากิ และเครป เปิดบริการ : วันจันทร์ – วันศุกร์ เวลา 06:30 น. - 18:00 น.",
+      link: "https://www.instagram.com/loongnhoom_square/",
+      icon: <Image src={loongnhoom} alt="logo" width={100} height={100} className="" />,
     }
   ]
 
@@ -123,9 +129,6 @@ export default function Home() {
               </motion.h1>
             </HeroHighlight>
           </section>
-          {/* <section id="description" className="section flex flex-col p-8 justify-center items-center w-screen h-full">
-            <TextGenerateEffect words={description} className="px-8" />
-          </section> */}
           <section id="agenda" className="section flex flex-col  p-1 sm:p-4 justify-center items-center w-full">
             <h2 className="text-3xl font-semibold my-8 ">Agenda</h2>
             <div className="w-full lg:w-[120vh] px-5 h-[150vh] lg:h-screen">
@@ -142,21 +145,6 @@ export default function Home() {
           </section>
           <section id="projects" className="section flex flex-col p-8 mt-4 justify-center items-center w-screen h-full">
             <HeroParallaxDemo />
-            {/* <h2 className="text-3xl font-semibold mb-4">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className=" p-6 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold mb-2">Project 1: Useless Button</h3>
-                <p>A button that doesn’t do anything – truly innovative.</p>
-              </div>
-              <div className="p-6 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold mb-2">Project 2: Confusing Calculator</h3>
-                <p>Every calculation is wrong, but at least it’s entertaining.</p>
-              </div>
-              <div className="p-6 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold mb-2">Project 3: Reverse Alarm Clock</h3>
-                <p>Wakes you up at random times to make sure you never sleep well.</p>
-              </div>
-            </div> */}
           </section>
         </main>
       </div>
