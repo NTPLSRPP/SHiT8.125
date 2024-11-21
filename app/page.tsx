@@ -9,7 +9,7 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Image from "next/image";
 import CreatorGarten from "@/assets/creatorsgarten.svg"
 import kmutt from "@/assets/kmutt_Graphic_notext.svg"
-import MicrosoftLogo from "@/assets/Microsoft_logo.svg"
+import MicrosoftLogo from "@/assets/Microsoft-logo.png"
 import loongnhoom from "@/assets/loongnhoom.jpg"
 import Doro from "@/assets/Doro.png"
 
@@ -145,25 +145,25 @@ export default function Home() {
       title: "Microsoft",
       description: "Microsoft creates platforms and tools powered by AI to deliver innovative solutions that meet the evolving needs of our customers. The technology company is committed to making AI available broadly and doing so responsibly, with a mission to empower every person and every organization on the planet to achieve more.",
       link: "https://learn.microsoft.com/en-us/credentials/",
-      icon: <Image src={MicrosoftLogo} alt="logo" width={70} height={70} />,
+      icon: <Image src={MicrosoftLogo} alt="logo" width={200} height={200} quality={100}/>,
     },
     {
       title: "KMUTT",
       description: "King Mongkut’s University of Technology Thonburi was founded as a research university serving as both educational park and industrial park. KMUTT currently produces qualified graduates and skillful human resources with strong quality and morality ground. The university actively involves in researchand development as well as provides quality academic services contributing to enhancement of economy and quality of life.",
       link: "https://www.kmutt.ac.th/",
-      icon: <Image src={kmutt} alt="logo" width={100} height={100} />,
+      icon: <Image src={kmutt} alt="logo" width={100} height={100} quality={100} />,
     },
     {
       title: "CreatorsGarten",
       description: "We are a community of creators (mostly) based in Thailand. We work with 🌃 open source communities, 💻 developers, 🚀 educators, 🦾 artists, and more to explore new possibilities and co-create fascinating things together.",
       link: "https://creatorsgarten.org/",
-      icon: <Image src={CreatorGarten} alt="logo" width={100} height={100} className="dark:invert" />,
+      icon: <Image src={CreatorGarten} alt="logo" width={100} height={100} quality={100} className="dark:invert" />,
     },
     {
       title: "Loongnhoom_square",
       description: "ลุงหนุ่ม สแควร์ จำหน่ายเครื่องดื่ม น้ำปั่น ทาโกยากิ และเครป เปิดบริการ : วันจันทร์ – วันศุกร์ เวลา 06:30 น. - 18:00 น.",
       link: "https://www.instagram.com/loongnhoom_square/",
-      icon: <Image src={loongnhoom} alt="logo" width={100} height={100} className="" />,
+      icon: <Image src={loongnhoom} alt="logo" width={100} height={100} quality={100} className="rounded-full" />,
     }
   ]
 
@@ -231,7 +231,7 @@ export default function Home() {
           <p>Made with ❤️ by <Link className="underline" href="https://github.com/NTPLSRPP">NTPLSRPP</Link></p>
           <p>Visit <Link className="underline" href="https://stupid.hackathon.in.th/">stupid.hackathon.in.th</Link> for more of this SHiT</p>
         </div>
-        <Image src="https://i.redd.it/n6ouh8znv3zb1.png" alt="logo" width={350} height={350} />
+        <Image src="https://i.redd.it/n6ouh8znv3zb1.png" alt="DoroDoCrime" width={350} height={350} quality={100} />
       </footer>
     </div>
   );
