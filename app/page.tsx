@@ -142,8 +142,8 @@ export default function Home() {
 
   const supporters = [
     {
-      title: "Microsoft Learn",
-      description: "Microsoft was founded in 1975. Our mission is to enable people and businesses throughout the world to realize their full potential by creating technology that transforms the way people work, play, and communicate. We develop and market software, services, and hardware devices that deliver new opportunities, greater convenience, and enhanced value to people's lives. We do business worldwide and have offices in more than 100 countries.",
+      title: "Microsoft",
+      description: "Microsoft creates platforms and tools powered by AI to deliver innovative solutions that meet the evolving needs of our customers. The technology company is committed to making AI available broadly and doing so responsibly, with a mission to empower every person and every organization on the planet to achieve more.",
       link: "https://learn.microsoft.com/en-us/credentials/",
       icon: <Image src={MicrosoftLogo} alt="logo" width={70} height={70} />,
     },
