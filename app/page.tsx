@@ -26,7 +26,7 @@ const SingleDoro = "https://preview.redd.it/doro-meme-explaining-v0-48tja35a4sec
 
 const RandomDoro = () => {
   const [doroCount, setDoroCount] = useState(1);
-  
+
   useEffect(() => {
     const countInterval = setInterval(() => {
       setDoroCount(prev => prev + 1);
@@ -48,7 +48,7 @@ const SingleRandomDoro = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [rotation, setRotation] = useState(0);
   const [flip, setFlip] = useState({ x: 1, y: 1 });
-  
+
   useEffect(() => {
     const updatePosition = () => {
       const x = Math.random() * (window.innerWidth - 100);
@@ -56,7 +56,7 @@ const SingleRandomDoro = () => {
       const newRotation = Math.random() * 360;
       const newFlipX = Math.random() > 0.5 ? 1 : -1;
       const newFlipY = Math.random() > 0.5 ? 1 : -1;
-      
+
       setPosition({ x, y });
       setRotation(newRotation);
       setFlip({ x: newFlipX, y: newFlipY });
@@ -69,21 +69,31 @@ const SingleRandomDoro = () => {
   }, []);
 
   return (
-    <Image
-      src={SingleDoro}
-      alt="Random Doro"
-      width={75}
-      height={75}
+    <a
+      href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      target="_blank"
+      rel="noopener noreferrer"
       style={{
         position: 'fixed',
         left: position.x,
         top: position.y,
         zIndex: 50,
-        pointerEvents: 'none',
+        cursor: 'default',
         transform: `rotate(${rotation}deg) scaleX(${flip.x}) scaleY(${flip.y})`,
         transition: 'all 0.5s ease-in-out',
       }}
-    />
+    >
+      <Image
+        src={SingleDoro}
+        alt="Random Doro"
+        width={75}
+        height={75}
+        style={{
+          transform: `rotate(${rotation}deg) scaleX(${flip.x}) scaleY(${flip.y})`,
+          transition: 'all 0.5s ease-in-out',
+        }}
+      />
+    </a>
   );
 };
 
@@ -145,7 +155,7 @@ export default function Home() {
       title: "Microsoft",
       description: "Microsoft creates platforms and tools powered by AI to deliver innovative solutions that meet the evolving needs of our customers. The technology company is committed to making AI available broadly and doing so responsibly, with a mission to empower every person and every organization on the planet to achieve more.",
       link: "https://learn.microsoft.com/en-us/credentials/",
-      icon: <Image src={MicrosoftLogo} alt="logo" width={200} height={200} quality={100}/>,
+      icon: <Image src={MicrosoftLogo} alt="logo" width={200} height={200} quality={100} />,
     },
     {
       title: "KMUTT",
@@ -216,7 +226,7 @@ export default function Home() {
           <section id="projects" className="section flex flex-col p-8 mt-4 justify-center items-center w-screen h-full">
             <h2 className="text-3xl font-semibold mb-4 lg:hidden">Projects</h2>
             <div className="hidden lg:block">
-              <HeroParallax products={projectData}/>
+              <HeroParallax products={projectData} />
             </div>
             <div className="block lg:hidden w-full">
               <FocusCards cards={projectData} />
