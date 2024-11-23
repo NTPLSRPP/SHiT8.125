@@ -164,7 +164,7 @@ export default function Home() {
       icon: <Image src={kmutt} alt="logo" width={100} height={100} quality={100} />,
     },
     {
-      title: "CreatorsGarten",
+      title: "Creatorsgarten",
       description: "We are a community of creators (mostly) based in Thailand. We work with 🌃 open source communities, 💻 developers, 🚀 educators, 🦾 artists, and more to explore new possibilities and co-create fascinating things together.",
       link: "https://creatorsgarten.org/",
       icon: <Image src={CreatorGarten} alt="logo" width={100} height={100} quality={100} className="dark:invert" />,
