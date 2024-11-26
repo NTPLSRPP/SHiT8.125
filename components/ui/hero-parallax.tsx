@@ -10,12 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { FlipWords } from "@/components/ui/flip-words";
-const wordsForFlip = [
-  "Stupid",
-  "Skibidi",
-  "Sus",
-  "Useless"
-]
+const wordsForFlip = ["Stupid", "Skibidi", "Sus", "Useless"];
 export const HeroParallax = ({
   products,
 }: {
@@ -63,8 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
-    >
+      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <Header />
       <motion.div
         style={{
@@ -73,8 +67,7 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className=""
-      >
+        className="">
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((product) => (
             <ProductCard
@@ -111,7 +104,8 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        The <FlipWords words={wordsForFlip} />Hackathon <br /> Projects
+        The <FlipWords words={wordsForFlip} />
+        Hackathon <br /> Projects
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
         This is a list of the stupidest projects you ever seen.
@@ -140,17 +134,15 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
-    >
+      className="group/product h-96 w-[30rem] relative flex-shrink-0">
       <Link
         href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
+        className="block group-hover/product:shadow-2xl ">
         <Image
           src={product.thumbnail}
           height="600"
           width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          className="object-contain absolute h-full w-full inset-0"
           alt={product.title}
         />
       </Link>

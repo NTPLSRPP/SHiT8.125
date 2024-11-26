@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-// import asd from "../../assets/image.png";
+import asd from "/public/image.png";
 type Card = {
   title: string;
   link: string;
@@ -49,7 +49,7 @@ const Card = React.memo(
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
       )}>
       <Image
-        src={card.thumbnail}
+        src="/image.png"
         alt={card.title}
         fill
         className="object-cover absolute inset-0"
